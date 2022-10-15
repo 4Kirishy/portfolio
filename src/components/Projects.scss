@@ -1,0 +1,12 @@
+.projects {
+  .projectsTitle {
+    margin-bottom: 50px;
+  }
+
+  .porjectsCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,9 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700;900&family=Roboto:wght@300;400&family=Source+Code+Pro&display=swap");
+
+:root {
+  --bg-color: #fffdfc;
+  --txt-color-main: #000;
+  --txt-color-sub: #fff;
+  --nav-txt-color: #535353;
+}
+
 * {
   margin: 0;
   padding: 0;
+
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: Archivo;
+
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 body {
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+}
+
+[class*="Container"] {
+  max-width: 928px;
+  margin: 0 auto;
+  margin-top: 65px;
+}
+
+[class*="Title"] {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: calc(52px / 48px * 100%);
+  margin-bottom: 30px;
+
+  @media (max-width: 576px) {
+    font-size: 32px;
+    margin-bottom: 15px;
+
+    text-align: center;
+  }
 }
