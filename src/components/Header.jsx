@@ -12,14 +12,14 @@ const Header = () => {
 
   return (
     <header className="header">
-      <NavLink to="." className="headerLogo">
+      <NavLink to="/portfolio" className="headerLogo">
         kt
       </NavLink>
 
       <ul className={`headerNavList ${isActiveBurger ? "_active" : ""}`}>
         <li className="headerNavItem">
           <NavLink
-            to="."
+            to="/portfolio"
             end
             style={({ isActive }) => (isActive ? { color: "#000" } : {})}
             onClick={() => {
