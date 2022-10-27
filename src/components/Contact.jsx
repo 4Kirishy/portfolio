@@ -3,13 +3,20 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import AnimationWrapper from "../layouts/AnimationWrapper";
 import Socials from "./Socials";
+import Alert from "./Alert";
 
 const Contact = () => {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
+  const [alert, setAlert] = useState(false);
 
   const form = useRef();
+
+  const toggleAlert = () => {
+    setAlert(true);
+    setTimeout(() => setAlert(false), 5000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -23,7 +30,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          toggleAlert();
         },
         (error) => {
           console.log(error.text);
@@ -80,6 +87,7 @@ const Contact = () => {
         </section>
       </AnimationWrapper>
       <Socials />
+      <Alert isAlert={alert} setAlert={setAlert} />
     </>
   );
 };
