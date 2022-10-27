@@ -15,7 +15,7 @@ const Home = () => {
               <p className="homeWho">
                 I am a Frontend Developer{" "}
                 <span>
-                  with over a year of <Link to="../projects">experience</Link>
+                  with over a year of <Link to="projects">experience</Link>
                 </span>
               </p>
               <div className="homeBtns">

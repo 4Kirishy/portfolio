@@ -31,7 +31,7 @@ const Header = () => {
         </li>
         <li className="headerNavItem">
           <NavLink
-            to="about"
+            to="/portfolio/about"
             style={({ isActive }) => (isActive ? { color: "#000" } : {})}
             onClick={() => {
               setIsActiveBurger(false);
@@ -42,7 +42,7 @@ const Header = () => {
         </li>
         <li className="headerNavItem">
           <NavLink
-            to="projects"
+            to="/portfolio/projects"
             style={({ isActive }) => (isActive ? { color: "#000" } : {})}
             onClick={() => {
               setIsActiveBurger(false);
@@ -53,7 +53,7 @@ const Header = () => {
         </li>
         <li className="headerNavItem">
           <NavLink
-            to="contact"
+            to="/portfolio/contact"
             style={({ isActive }) => (isActive ? { color: "#000" } : {})}
             onClick={() => {
               setIsActiveBurger(false);

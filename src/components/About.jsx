@@ -20,7 +20,7 @@ const About = () => {
               as well as a web designer. I am a fast learner, easy to
               communicate, interested in developing myself and the people I work
               with. Check out my
-              <Link to="../projects" className="projectsLink">
+              <Link to="../portfolio/projects" className="projectsLink">
                 {" "}
                 latest projects
               </Link>{" "}
