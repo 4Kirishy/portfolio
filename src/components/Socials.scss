@@ -1,16 +1,21 @@
 .socials {
-  // position: absolute;
-  // bottom: 10%;
-  // left: 0;
-  // width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-self: center;
 
   &List {
     display: flex;
     gap: 70px;
 
     margin-bottom: 30px;
+
+    @media (max-width: 400px) {
+      gap: 30px;
+    }
   }
 
   &LinkTo,

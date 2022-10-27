@@ -5,12 +5,12 @@ const ProjectCard = (props) => {
   const { title, description, usedTechnologies, img, link, gitHubLink } = props;
   return (
     <div className="projectCard">
-      <img src={img} alt="project image" />
+      <img src={img} alt="project" />
       <div className="projectCardLinks">
-        <a href={gitHubLink} target="_blank">
+        <a href={gitHubLink} target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
           <FaExternalLinkAlt />
         </a>
       </div>
@@ -20,7 +20,9 @@ const ProjectCard = (props) => {
       </div>
       <ul className="projectCardTechList">
         {usedTechnologies.map((tech) => (
-          <li className="projectCardTechItem">{tech}</li>
+          <li key={tech} className="projectCardTechItem">
+            {tech}
+          </li>
         ))}
       </ul>
     </div>

@@ -1,14 +1,22 @@
 import { FaGithub, FaTelegram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import "./Socials.scss";
+import { motion } from "framer-motion";
 
 const Socials = () => {
   return (
-    <div className="socials">
+    <motion.div
+      className="socials"
+      initial={{ bottom: -500, opacity: 0 }}
+      animate={{ bottom: 20, opacity: 1 }}
+      exit={{ bottom: -500, opacity: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
       <ul className="socialsList">
         <li className="socialsItem">
           <a
             href="https://github.com/4Kirishy"
             target="_blank"
+            rel="noreferrer"
             className="socialsLinkTo"
           >
             <FaGithub />
@@ -18,6 +26,7 @@ const Socials = () => {
           <a
             href="https://telegram.me/mold_in"
             target="_blank"
+            rel="noreferrer"
             className="socialsLinkTo"
           >
             <FaTelegram />
@@ -27,6 +36,7 @@ const Socials = () => {
           <a
             href="https://www.linkedin.com/in/kyrylo-teplynskyi-7646b822b/"
             target="_blank"
+            rel="noreferrer"
             className="socialsLinkTo"
           >
             <FaLinkedinIn />
@@ -36,21 +46,14 @@ const Socials = () => {
           <a
             href="https://twitter.com/Kirishy4"
             target="_blank"
+            rel="noreferrer"
             className="socialsLinkTo"
           >
             <FaTwitter />
           </a>
         </li>
       </ul>
-
-      {/* <a
-        href="mailto:kyryloteplynskyi@gmail.com"
-        target="_blank"
-        className="socialsEmail"
-      >
-        kyryloteplynskyi@gmail.com
-      </a> */}
-    </div>
+    </motion.div>
   );
 };
 

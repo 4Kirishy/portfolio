@@ -5,7 +5,18 @@
     font-size: 24px;
     line-height: 160%;
 
-    a {
+    .cvLink {
+      font-family: inherit;
+      color: #000;
+      font-weight: 400;
+      transition: letter-spacing 0.3s;
+
+      &:hover {
+        letter-spacing: 0.05em;
+      }
+    }
+
+    .projectsLink {
       font-family: inherit;
       color: #000;
 
@@ -17,7 +28,7 @@
         bottom: -5px;
 
         width: 60%;
-        height: 2px;
+        height: 1px;
 
         background-color: rgba($color: #000000, $alpha: 0.6);
         transition: width 0.2s;
